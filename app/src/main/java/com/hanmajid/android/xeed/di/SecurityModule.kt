@@ -7,6 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import java.security.KeyStore
 import javax.inject.Singleton
 
 @Module
@@ -22,5 +23,13 @@ object SecurityModule {
         return MasterKey.Builder(context)
             .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
             .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideAndroidKeyStore(): KeyStore {
+        return KeyStore.getInstance("AndroidKeyStore").apply {
+            load(null)
+        }
     }
 }
