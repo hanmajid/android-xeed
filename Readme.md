@@ -1,6 +1,12 @@
 # android-xeed
 
-## Hilt DI Modules
+⚙️ Work in progress ⚙️
+
+## Hilt DI Module Classes
 
 1. SecurityModule: provides `MasterKey`
 2. SharedPreferencesModule: provides `EncryptedSharedPreferences` for API level >= 21 (`SharedPreferences` otherwise)
+
+## Util Classes
+
+1. FileUtil: read/write files & read/write encrypted files in internal storage
