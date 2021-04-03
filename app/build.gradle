@@ -15,6 +15,7 @@ android {
         targetSdk 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -77,4 +78,10 @@ dependencies {
     // Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+    // Security
+    implementation "androidx.security:security-crypto:$securityCrypto_version"
+
+    // Multidex
+    implementation "androidx.multidex:multidex:$multidex_version"
 }

@@ -2,8 +2,10 @@
 buildscript {
     ext {
         hilt_version = '2.33-beta'
+        multidex_version = "2.0.1"
         nav_version = "2.3.4"
         room_version = "2.2.6"
+        securityCrypto_version = "1.1.0-alpha03"
     }
     repositories {
         google()
